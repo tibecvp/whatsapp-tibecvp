@@ -17,8 +17,11 @@
   --color-green-secondary: var(--green-secondary);
   --color-green-chat: var(--green-chat);
 
-  --image-chat-tile-light: var(--chat-tile-light);
-  --image-chat-tile-dark: var(--chat-tile-dark);
+  /* --color-chat-tile-light: var(--chat-tile-light);
+  --color-chat-tile-dark: var(--chat-tile-dark); */
+
+  --chat-tile-light: url(./../../public/bg-light.png);
+  --chat-tile-dark: url(./../../public/bg-dark.png);
   /* CLASSES ADDED BY US */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -74,8 +77,6 @@
   --green-primary: hsl(167, 100%, 33%);
   --green-chat: hsl(111, 91%, 91%);
 
-  --chat-tile-light: url("/bg-light.png");
-  --chat-tile-dark: url("/bg-dark.png");
   /* CLASSES ADDED BY US */
 
   --card: hsl(0 0% 100%);
@@ -124,9 +125,6 @@
   --green-chat: hsl(169, 100%, 18%);
 
   --gray-tertiary: hsl(203, 22%, 21%);
-
-  --chat-tile-light: url("/bg-light.png");
-  --chat-tile-dark: url("/bg-dark.png");
   /* CLASSES ADDED BY US */
 
   --card: hsl(222.2 84% 4.9%);
