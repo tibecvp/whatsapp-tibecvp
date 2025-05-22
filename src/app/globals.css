@@ -6,6 +6,20 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* CLASSES ADDED BY US */
+  --color-container: var(--container);
+  --color-gray-primary: var(--gray-primary);
+  --color-gray-secondary: var(--gray-secondary);
+  --color-gray-tertiary: var(--gray-tertiary);
+  --color-left-panel: var(--left-panel);
+  --color-chat-hover: var(--chat-hover);
+  --color-green-primary: var(--green-primary);
+  --color-green-secondary: var(--green-secondary);
+  --color-green-chat: var(--green-chat);
+
+  --image-chat-tile-light: var(--chat-tile-light);
+  --image-chat-tile-dark: var(--chat-tile-dark);
+  /* CLASSES ADDED BY US */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
