@@ -1,6 +1,6 @@
 'use client'
 
-import { ListFilter, LogOut, MessageSquareDiff, Search } from "lucide-react"
+import { ListFilter, MessageSquareDiff, Search } from "lucide-react"
 import { Input } from "../ui/input"
 import ThemeSwitch from "../theme-switch"
 import { conversations } from "@/dummy-data/db"
