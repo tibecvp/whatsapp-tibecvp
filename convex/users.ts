@@ -1,5 +1,5 @@
 import { ConvexError, v } from "convex/values"
-import { internalMutation } from "./_generated/server"
+import { internalMutation, query } from "./_generated/server"
 
 
 export const createUser = internalMutation({
@@ -69,3 +69,39 @@ export const setUserOffline = internalMutation({
         await ctx.db.patch(user._id, { isOnline: false })
     }
 })
+
+export const getUsers = query({
+    args: {},
+    handler: async (ctx, args) => {
+        const identity = await ctx.auth.getUserIdentity()
+        if (!identity) {
+            throw new ConvexError("Unauthorized")
+        }
+
+        const users = await ctx.db.query("users").collect()
+        return users
+    }
+})
+
+export const getMe = query({
+    args: {},
+    handler: async (ctx, args) => {
+        const identity = await ctx.auth.getUserIdentity()
+        if (!identity) {
+            throw new ConvexError("Unauthorized")
+        }
+
+        const user = await ctx.db
+        .query("users")
+        .withIndex("by_tokenIdentifier", (q) => q.eq("tokenIdentifier", identity.tokenIdentifier))
+        .unique()
+
+        if (!user) {
+            throw new ConvexError("User not found")
+        }
+
+        return user
+    }
+})
+
+// TODO: add getGroupMembers query later
